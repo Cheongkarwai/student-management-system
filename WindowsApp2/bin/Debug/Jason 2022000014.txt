@@ -1,0 +1,14 @@
+﻿Student Name : Jason
+Student ID : 2022000014
+IC No : 900228120563
+Passport No : 
+Country : Malaysia
+Contact No : 6011-28188291
+Gender : M
+Date Of Birth : 1990-02-28
+Email Address : jason@icloud.com
+Home Address : No 1,Jalan Syurga,Taman Syurga
+State : Selangor
+City : Cheras
+Postcode : 43200
+Student Email : 2022000014@ucsicollege.edu.my

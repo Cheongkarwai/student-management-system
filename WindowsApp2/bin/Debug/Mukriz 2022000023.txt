@@ -1,0 +1,14 @@
+﻿Student Name : Mukriz
+Student ID : 2022000023
+IC No : 
+Passport No : A12132323232
+Country : Bangladesh
+Contact No : 6018-2320013
+Gender : M
+Date Of Birth : 2002-08-28
+Email Address : mukriz@yahoo.com
+Home Address : No 1,Jalan Tak Tau,Taman Tak Tau
+State : Selangor
+City : Cheras
+Postcode : 43200
+Student Email : 2022000023@ucsicollege.edu.my

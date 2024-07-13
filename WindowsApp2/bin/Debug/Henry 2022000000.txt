@@ -1,0 +1,14 @@
+﻿Student Name : Henry
+Student ID : 2022000000
+IC No : 020828140563
+Passport No : 
+Country : Malaysia
+Contact No : 6011-28188291
+Gender : M
+Date Of Birth : 2002-08-28
+Email Address : henry@gmail.com
+Home Address : No1,Jalan1,Taman1
+State : Selangor
+City : Cheras
+Postcode : 43200
+Student Email : 2022000000@ucsicollege.edu.my

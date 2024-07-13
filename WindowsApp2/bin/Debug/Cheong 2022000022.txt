@@ -1,0 +1,14 @@
+﻿Student Name : Cheong
+Student ID : 2022000022
+IC No : 020828140563
+Passport No : 
+Country : Malaysia
+Contact No : 6011-28188291
+Gender : M
+Date Of Birth : 2002-08-28
+Email Address : cheong@gmail.com
+Home Address : No1,Jalan 1,Taman 1
+State : Selangor
+City : Cheras
+Postcode : 43200
+Student Email : 2022000022@ucsicollege.edu.my

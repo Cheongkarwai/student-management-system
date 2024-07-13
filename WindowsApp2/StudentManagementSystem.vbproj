@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E85DCFB4-20B2-4F92-8573-2DD8E28156E0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WindowsApp2.My.MyApplication</StartupObject>
+    <RootNamespace>WindowsApp2</RootNamespace>
+    <AssemblyName>WindowsApp2</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>WindowsApp2.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>WindowsApp2.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.4\lib\net48\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.14.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.14.0\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.2.6\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.2.6\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.28\lib\net48\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.28\lib\net48\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+    <Reference Include="ZstdNet, Version=1.4.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.28\lib\net48\ZstdNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminAddCourseForm.Designer.vb">
+      <DependentUpon>AdminAddCourseForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAddCourseForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCourseOverviewForm.Designer.vb">
+      <DependentUpon>AdminCourseOverviewForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCourseOverviewForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAttendanceForm.Designer.vb">
+      <DependentUpon>AdminAttendanceForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAttendanceForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCourseForm.Designer.vb">
+      <DependentUpon>AdminCourseForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCourseForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminECAForm.Designer.vb">
+      <DependentUpon>AdminECAForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminECAForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminGradingForm.Designer.vb">
+      <DependentUpon>AdminGradingForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminGradingForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminStudAdmForm.Designer.vb">
+      <DependentUpon>AdminStudAdmForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminStudAdmForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTimetableForm.Designer.vb">
+      <DependentUpon>AdminTimetableForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTimetableForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentDashboardForm.designer.vb">
+      <DependentUpon>StudentDashboardForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StudentDashboardForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecDashboardForm.Designer.vb">
+      <DependentUpon>LecDashboardForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LecDashboardForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecForm.Designer.vb">
+      <DependentUpon>LecForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LecForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecOverviewClassForm.Designer.vb">
+      <DependentUpon>LecOverviewClassForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LecOverviewClassForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecOverviewTimetableForm.Designer.vb">
+      <DependentUpon>LecOverviewTimetableForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LecOverviewTimetableForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecProfileForm.Designer.vb">
+      <DependentUpon>LecProfileForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LecProfileForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecStudAttForm.Designer.vb">
+      <DependentUpon>LecStudAttForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LecStudAttForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecStudGradeForm.Designer.vb">
+      <DependentUpon>LecStudGradeForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LecStudGradeForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminManageClassForm.Designer.vb">
+      <DependentUpon>AdminManageClassForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminManageClassForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDashboardForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDashboardForm.Designer.vb">
+      <DependentUpon>AdminDashboardForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm.Designer.vb">
+      <DependentUpon>AdminForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminManageLecForm.Designer.vb">
+      <DependentUpon>AdminManageLecForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminManageLecForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecModule.vb" />
+    <Compile Include="login.Designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentGradeReport.designer.vb">
+      <DependentUpon>StudentGradeReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StudentGradeReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentCocurriculum.designer.vb">
+      <DependentUpon>StudentCocurriculum.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StudentCocurriculum.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentCourseSelection.designer.vb">
+      <DependentUpon>StudentCourseSelection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StudentCourseSelection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="AdminProfileForm.Designer.vb">
+      <DependentUpon>AdminProfileForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminProfileForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentProfileForm.designer.vb">
+      <DependentUpon>StudentProfileForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StudentProfileForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrationForm.designer.vb">
+      <DependentUpon>RegistrationForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="roundCornerModule.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="StudentForm.designer.vb">
+      <DependentUpon>StudentForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StudentForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="verifyForm.Designer.vb">
+      <DependentUpon>verifyForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="verifyForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewImg.Designer.vb">
+      <DependentUpon>viewImg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="viewImg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AdminAddCourseForm.resx">
+      <DependentUpon>AdminAddCourseForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCourseOverviewForm.resx">
+      <DependentUpon>AdminCourseOverviewForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminAttendanceForm.resx">
+      <DependentUpon>AdminAttendanceForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCourseForm.resx">
+      <DependentUpon>AdminCourseForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminECAForm.resx">
+      <DependentUpon>AdminECAForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminGradingForm.resx">
+      <DependentUpon>AdminGradingForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminStudAdmForm.resx">
+      <DependentUpon>AdminStudAdmForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminTimetableForm.resx">
+      <DependentUpon>AdminTimetableForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentDashboardForm.resx">
+      <DependentUpon>StudentDashboardForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecDashboardForm.resx">
+      <DependentUpon>LecDashboardForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecForm.resx">
+      <DependentUpon>LecForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecOverviewClassForm.resx">
+      <DependentUpon>LecOverviewClassForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecOverviewTimetableForm.resx">
+      <DependentUpon>LecOverviewTimetableForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecProfileForm.resx">
+      <DependentUpon>LecProfileForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecStudAttForm.resx">
+      <DependentUpon>LecStudAttForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecStudGradeForm.resx">
+      <DependentUpon>LecStudGradeForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminManageClassForm.resx">
+      <DependentUpon>AdminManageClassForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDashboardForm.resx">
+      <DependentUpon>AdminDashboardForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminManageLecForm.resx">
+      <DependentUpon>AdminManageLecForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentGradeReport.resx">
+      <DependentUpon>StudentGradeReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentCocurriculum.resx">
+      <DependentUpon>StudentCocurriculum.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentCourseSelection.resx">
+      <DependentUpon>StudentCourseSelection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminProfileForm.resx">
+      <DependentUpon>AdminProfileForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentProfileForm.resx">
+      <DependentUpon>StudentProfileForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentForm.resx">
+      <DependentUpon>StudentForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="verifyForm.resx">
+      <DependentUpon>verifyForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewImg.resx">
+      <DependentUpon>viewImg.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="My Project\Settings.settings">
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
